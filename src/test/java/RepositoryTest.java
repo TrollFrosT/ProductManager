@@ -60,25 +60,7 @@ class RepositoryTest {
         Assertions.assertArrayEquals(expected, actual);
     }
 
-    @Test
-    public void testRemoveByIdThenIdInCorrect() {
-        Repository repo = new Repository();
-
-        Book book1 = new Book(1, "Harry Potter 1", 100, "Rowling");
-        Book book2 = new Book(2, "War and Piece", 100, "Tolstoy");
-        Book book3 = new Book(3, "Harry Potter 2", 100, "Rowling");
-
-        repo.add(book1);
-        repo.add(book2);
-        repo.add(book3);
-        repo.removeById(4);
-
-        Product[] actual = repo.findAll();
-        Product[] expected = {book1, book2, book3};
-
-        Assertions.assertArrayEquals(expected, actual);
-    }
-
+    
     @Test
     public void testRemoveByIdThenIdIsInCorrect2() {
         Repository repo = new Repository();
@@ -96,7 +78,7 @@ class RepositoryTest {
         );
     }
 
-    
+
 
 
 }
